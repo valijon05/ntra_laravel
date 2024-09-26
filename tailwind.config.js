@@ -1,7 +1,5 @@
-
 import defaultTheme from 'tailwindcss/defaultTheme';
 import forms from '@tailwindcss/forms';
-
 const colors = require('tailwindcss/colors')
 const plugin = require('tailwindcss/plugin')
 
