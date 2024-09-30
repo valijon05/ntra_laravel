@@ -7,16 +7,18 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', \App\Actions\GetAads::class);
-Route::get('ads/create',[App\Http\Controllers\AdController::class,'create']);
-Route::get('/ads/{id}' ,[AdController::class,'show']);
+Route::get('/', [AdController::class, "index"]);
+
+Route::middleware('auth')->group(function () {
 Route::resource('ads', \App\Http\Controllers\AdController::class);
 Route::get('/search',[\App\Http\Controllers\AdController::class ,'find']);
 Route::get('branches',[\App\Http\Controllers\BranchController::class,'index' ]);
 Route::get('/contact',[\App\Http\Controllers\AdController::class,'contact']);
 Route::get('/branch/{id}',[\App\Http\Controllers\BranchController::class,'branch' ]);
-
-
+Route::post("/ads/{id}/bookmark",[\App\Http\Controllers\UserController::class ,  "toggleBookmark"]);
+Route::get('/my/profile',[\App\Http\Controllers\UserController::class, 'profile']);
+Route::get('/ads/{id}' ,[AdController::class,'show']);
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');

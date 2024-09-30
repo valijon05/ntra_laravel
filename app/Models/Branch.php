@@ -10,6 +10,15 @@ class Branch extends Model
     use HasFactory;
     public function ads(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
-    return $this->hasMany(Ad::class);
+    return $this->hasMany(Ad::class ,'branches_id');
     }
+    public function getAdsCountAttribute()
+    {
+        return $this->ads()->count();
+    }
+    public function branch(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    {
+        return $this->belongsTo(Branch::class);
+    }
+
 }

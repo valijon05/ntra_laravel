@@ -22,6 +22,7 @@ class StatusResource extends ModelResource
     protected string $model = Status::class;
 
     protected string $title = 'Statuses';
+    public string $column="name";
 
     /**
      * @return list<MoonShineComponent|Field>
@@ -31,9 +32,7 @@ class StatusResource extends ModelResource
         return [
             Block::make([
                 ID::make()->sortable(),
-                Text::make("name")->sortable(),
-                Text::make("created_at")->sortable(),
-                Text::make("updated_at")->sortable(),
+                Text::make("name")->sortable()
             ]),
         ];
     }

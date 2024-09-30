@@ -1,0 +1,95 @@
+<?php
+
+return [
+    'profile' => 'Profil',
+    'dashboard' => 'Boshqaruv paneli',
+    'add' => 'Qo\'shish',
+    'create' => 'Yaratish',
+    'edit' => 'Tahrirlash',
+    'show' => 'Ko\'rish',
+    'save' => 'Saqlash',
+    'saved' => 'Saqlandi',
+    'saved_error' => 'Xatolik yuz berdi',
+    'filters' => 'Filtrlar',
+    'search' => 'Qidiruv',
+    'reset' => 'Qayta tiklash',
+    'total' => 'Hammasi',
+    'deleted' => 'O\'chirildi',
+    'delete' => 'O\'chirish',
+    'deleting' => 'O\'chirilmoqda',
+    'download' => 'Yuklash',
+    'export' => 'Eksport',
+    'import' => 'Import',
+    'cancel' => 'Bekor qilish',
+    'confirm' => 'Tasdiqlash',
+    'close' => 'Yopish',
+    'confirm_message' => 'Siz yozuvni o\'chirishni xohlaysizmi?',
+    'back' => 'Orqaga qaytish',
+    'more' => 'O\'tish',
+    'all_sections' => 'Barcha bo\'limlar',
+    'file' => 'Fayl',
+    'loading' => 'Yuklanmoqda ...',
+    'notfound' => 'Hozircha yozuvlar yo\'q',
+    'collapse_menu' => 'Menyuni yopish',
+    '404' => '404. Sahifa topilmadi',
+    'copied' => 'Ko\'chirildi!',
+    'notifications' => [
+        'title' => 'Xabarnomalar',
+        'mark_as_read_all' => 'Barchasi o\'qildi',
+        'mark_as_read' => 'O\'qildi',
+    ],
+    'login' => [
+        'title' => ':moonshine_title ga xush kelibsiz!',
+        'description' => 'Iltimos, hisobingizga kiring',
+        'authorization' => 'Avtorizatsiya',
+        'remember_me' => 'Esda saqlash',
+        'login' => 'Kirish',
+        'logout' => 'Chiqish',
+        'username' => 'Foydalanuvchi nomi',
+        'email' => 'E-mail',
+        'password' => 'Parol',
+        'or_socials' => 'yoki',
+    ],
+    'resource' => [
+        'system' => 'Tizim',
+        'role' => 'Rollar',
+        'name' => 'Ism',
+        'email' => 'E-mail',
+        'password' => 'Parol',
+        'repeat_password' => 'Parolni takrorlang',
+        'avatar' => 'Avatar',
+        'created_at' => 'Yaratilgan sana',
+        'admins_title' => 'Administratorlar',
+        'role_title' => 'Rollar',
+        'role_name' => 'Nom',
+
+        'main_information' => 'Asosiy ma\'lumotlar',
+        'change_password' => 'Parolni o\'zgartirish',
+
+        'link_socialite' => 'Hisoblarni bog\'lash',
+        'linked_socialite' => 'Bog\'langan hisoblar',
+
+        'queued' => 'Navbatga qo\'yildi',
+
+        'export' => [
+            'exported' => 'Eksport qilingan',
+            'confirm_content' => 'Ma\'lumotlarni eksport qilishni tasdiqlang',
+        ],
+
+        'import' => [
+            'imported' => 'Import qilingan',
+            'file_required' => 'Fayl majburiy',
+            'extension_not_supported' => 'Fayl kengaytmasi qo\'llab-quvvatlanmaydi'
+        ]
+    ],
+    'choices' => [
+        'no_results' => 'Hech narsa topilmadi',
+        'no_choices' => 'Tanlash uchun variantlar yo\'q',
+        'item_select' => 'Tanlash uchun bosing',
+        'unique_item' => 'Faqat noyob qiymatlar qo\'shilishi mumkin',
+        'custom_add_item' => 'Ma\'lum shartlarga mos keladigan qiymatlar qo\'shilishi mumkin',
+        'add_item' => '«:value» qo\'shish uchun Enter tugmasini bosing',
+        'max_item' => 'Maksimal elementlar soni: :count',
+        'remove_item' => 'Elementni o\'chirish',
+    ]
+];

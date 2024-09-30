@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Status extends Model
 {
     use HasFactory;
+    const ACTIVE=1;
+    const INACTIVE=2;
 }

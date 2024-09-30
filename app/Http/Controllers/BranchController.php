@@ -21,5 +21,4 @@ class BranchController extends Controller
        $ads=Ad::all();
        return view('components.branchS', ['ads'=>$ads]);
     }
-
 }

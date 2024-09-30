@@ -11,10 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('ads_images', function (Blueprint $table) {
+        Schema::create('ad_images', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->foreignId('ads_id')->constrained();
+            $table->foreignId('ad_id')->constrained();
             $table->timestamps();
         });
     }
@@ -24,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('ads_images');
+        Schema::dropIfExists('ad_images');
     }
 };

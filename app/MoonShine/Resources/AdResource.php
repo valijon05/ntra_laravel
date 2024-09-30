@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace App\MoonShine\Resources;
 
 use App\Enums\Gender;
-use App\Models\Branch;
 use Faker\Core\Number;
 use Faker\Provider\Text;
 use Illuminate\Database\Eloquent\Model;
@@ -13,6 +12,7 @@ use App\Models\Ad;
 
 use MoonShine\Fields\Enum;
 use MoonShine\Fields\Relationships\BelongsTo;
+use MoonShine\Fields\Relationships\HasMany;
 use MoonShine\Fields\Textarea;
 use MoonShine\Resources\ModelResource;
 use MoonShine\Decorations\Block;
@@ -26,8 +26,6 @@ use MoonShine\Components\MoonShineComponent;
 class AdResource extends ModelResource
 {
     protected string $model = Ad::class;
-    protected string $resourceType = Branch::class;
-
 
     protected string $title = "E'lonlar";
 
@@ -40,14 +38,16 @@ class AdResource extends ModelResource
             Block::make([
                 ID::make()->sortable(),
                 \MoonShine\Fields\Text::make("title"),
-                \MoonShine\Fields\Text::make("description"),
+                \MoonShine\Fields\Text::make("description")->hideOnIndex(),
                 Textarea::make("address"),
                 \MoonShine\Fields\Number::make("rooms")->sortable(),
                 \MoonShine\Fields\Number::make("price")->sortable(),
-                Enum::make("gender")->attach(Gender::class),
-                BelongsTo::make(label: 'branches', resource: new BranchesResource()),
+                Enum::make("gender")->attach(Gender::class)->sortable(),
+                BelongsTo::make(label: 'branch',relationName: 'branch' , resource: new BranchResource()),
                 BelongsTo::make(label: 'status', resource: new StatusResource()),
-                BelongsTo::make(label: 'users', resource: new UserResource()),
+                BelongsTo::make(label: 'user', resource: new UserResource()),
+                BelongsTo::make(label: 'Mualif',relationName: 'owner' ,resource: new  UserResource()),
+                HasMany::make("images",relationName: "images" ,resource: new ImagesResource())->onlyLink(),
 
 
             ]),

@@ -5,8 +5,9 @@ declare(strict_types=1);
 namespace App\MoonShine\Resources;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Branch;
+use App\Models\Images;
 
+use MoonShine\Fields\Image;
 use MoonShine\Fields\Text;
 use MoonShine\Resources\ModelResource;
 use MoonShine\Decorations\Block;
@@ -15,14 +16,14 @@ use MoonShine\Fields\Field;
 use MoonShine\Components\MoonShineComponent;
 
 /**
- * @extends ModelResource<Branch>
+ * @extends ModelResource<Images>
  */
-class BranchesResource extends ModelResource
+class ImagesResource extends ModelResource
 {
-    protected string $model = Branch::class;
+    protected string $model = Images::class;
 
-    protected string $title = 'Branches';
-    public string $column='name';
+    protected string $title = 'Images';
+
 
     /**
      * @return list<MoonShineComponent|Field>
@@ -31,19 +32,13 @@ class BranchesResource extends ModelResource
     {
         return [
             Block::make([
-                ID::make()->sortable(),
-                Text::make("name")->sortable(),
-                Text::make("address")->sortable(),
-                Text::make("created_at")->sortable(),
-                Text::make("updated_at")->sortable()
-
-
+               Image::make("name")
             ]),
         ];
     }
 
     /**
-     * @param Branches $item
+     * @param Images $item
      *
      * @return array<string, string[]|string>
      * @see https://laravel.com/docs/validation#available-validation-rules

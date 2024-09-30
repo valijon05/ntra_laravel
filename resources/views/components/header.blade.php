@@ -11,12 +11,11 @@
     <meta name="email" content="support@shreethemes.in" />
     <meta name="version" content="2.2.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
+   
     <!-- favicon -->
     <link rel="shortcut icon" href="/assets/images/favicon.ico" />
 
     <!-- Css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="/assets/libs/tiny-slider/tiny-slider.css" rel="stylesheet">
     <link href="/assets/libs/tobii/css/tobii.min.css" rel="stylesheet">
     <link href="/assets/libs/choices.js/public/assets/styles/choices.min.css" rel="stylesheet">

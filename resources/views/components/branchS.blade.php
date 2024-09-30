@@ -43,7 +43,7 @@
 
                             <ul class="pt-6 flex justify-between items-center list-none">
                                 <li>
-                                    <span class="text-slate-400">Ta'rif</span>
+                                    <span class="text-slate-400">ta'rif</span>
                                     <p class="text-lg font-medium"><?= $ad->description ?></p>
                                 </li>
 

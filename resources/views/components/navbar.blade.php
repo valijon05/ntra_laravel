@@ -65,7 +65,7 @@
                 <a href="/login" class="btn bg-green-600 hover:bg-green-700 border-green-600 dark:border-green-600 text-white rounded-full">Login</a>
             </li>
             <li class="sm:inline ps-1 mb-0 hidden">
-                <a href="/signup" class="btn bg-green-600 hover:bg-green-700 border-green-600 dark:border-green-600 text-white rounded-full">Register</a>
+                <a href="/register" class="btn bg-green-600 hover:bg-green-700 border-green-600 dark:border-green-600 text-white rounded-full">Register</a>
             </li>
             <?php //endif; ?>
 
@@ -80,11 +80,13 @@
             <ul class="navigation-menu justify-end nav-light">
                 <li class="has-submenu parent-parent-menu-item">
                     <a href="/ads">E'lonlar</a>
+
                 </li>
 
                 <li><a href="/branches" class="sub-menu-item">Branch</a></li>
-
-                <li><a href="/contact" class="sub-menu-item">Contact</a></li>
+                <li><a href="/my/profile" class="sub-menu-item">profile</a></li>
+                <li><a href="/ads/create" class="sub-menu-item">elon </a></li>
+                <li><a href="/contact" class="sub-menu-item">contact</a></li>
 
             </ul><!--end navigation menu-->
         </div><!--end navigation-->
