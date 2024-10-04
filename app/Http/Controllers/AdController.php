@@ -51,6 +51,7 @@ class AdController extends Controller
      */
     #[NoReturn] public function store(Request $request)
     {
+//        dd($request->all());
 
         $request->validate([
             'title' => 'required | min:5',
@@ -70,17 +71,22 @@ class AdController extends Controller
             'branches_id' => $request->input("branch_id"),
             'price' => $request->input("price"),
             'rooms' => $request->input("rooms"),
-             'gender'=>$request->input("gender")
+            'gender'=>$request->input("gender"),
+            'image' => $request->file("image")->store("images")
+
 
         ]);
 
-        $file = Storage::disk('public')->put('/', $request->image);
+        if ($request->hasFile('image')) {
+            $file = Storage::disk('public')->put('/', $request->image);
 
-        Images::query()->create([
-            'ad_id' => $ad->id,
-            'name' => $file
-        ]);
-        return redirect('/');
+            Images::query()->create([
+                'ad_id' => $ad->id,
+                'name'  => $file,
+            ]);
+        }
+
+        return redirect(route('home'))->with('message', "E'lon yaratildi");
     }
 
 

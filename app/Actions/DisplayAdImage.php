@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Actions;
 
 use App\Models\Ad;
@@ -12,6 +14,6 @@ class DisplayAdImage
         if ($image) {
             return "/storage/$image";
         }
-        return "/storage/default-ad-image.jpg";
+        return "/storage/default-ad-image.png";
     }
 }

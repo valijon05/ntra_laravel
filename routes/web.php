@@ -7,7 +7,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', [AdController::class, "index"]);
+Route::get('/', [AdController::class, "index"])->name('home');
 
 Route::middleware('auth')->group(function () {
 Route::resource('ads', \App\Http\Controllers\AdController::class);
@@ -31,3 +31,4 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
