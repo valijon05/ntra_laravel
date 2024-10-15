@@ -14,7 +14,7 @@ class UserController extends Controller
 
         // User modelidagi bookmarkAds metodini chaqirish
         if ($user->bookmarkAds()->where('ad_id', $id)->exists()) {
-            // Agar e'lon allaqachon bookmarklangan bo'lsa, o'chirish
+
             $user->bookmarkAds()->detach($id);
             return back()->with('message', "elon o'chiildi");
         } else {
@@ -33,9 +33,9 @@ class UserController extends Controller
 
     public function profile(): \Illuminate\Contracts\View\View|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\Factory
     {
-        $user=auth()->user();
+        $user = auth()->user();
         $ads = Ad::all();
-      return view('ads.profile',compact('user','ads'));
+        return view('ads.profile', compact('user', 'ads'));
     }
 
 }

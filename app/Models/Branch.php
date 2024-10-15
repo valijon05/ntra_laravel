@@ -8,6 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Branch extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'name',
+        'address',
+        'created_at',
+        'updated_at',
+    ];
     public function ads(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
     return $this->hasMany(Ad::class ,'branches_id');

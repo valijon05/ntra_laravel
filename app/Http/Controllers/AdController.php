@@ -51,7 +51,6 @@ class AdController extends Controller
      */
     #[NoReturn] public function store(Request $request)
     {
-//        dd($request->all());
 
         $request->validate([
             'title' => 'required | min:5',
@@ -71,9 +70,7 @@ class AdController extends Controller
             'branches_id' => $request->input("branch_id"),
             'price' => $request->input("price"),
             'rooms' => $request->input("rooms"),
-            'gender'=>$request->input("gender"),
-            'image' => $request->file("image")->store("images")
-
+             'gender'=>$request->input("gender")
 
         ]);
 
@@ -146,7 +143,7 @@ class AdController extends Controller
         }
         $ads = $ads->with('branch')->get();
         $branches = Branch::all();
-        return view('home', compact('ads', 'branches'));
+        return view('ads.index', compact('ads', 'branches'));
     }
 
 
