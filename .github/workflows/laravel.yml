@@ -51,4 +51,4 @@ jobs:
                  cd ntra_laravel
                  git pull
                  docker-compose -f docker-compose.prodction.yml up -d --build
-                 docker exec rent_app php artisan optimize
+                 docker exec rent_app artisan optimize
